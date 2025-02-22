@@ -12,14 +12,38 @@
         background-color: #212121;
         color: white;
     }
+    .mt-4 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
     </style>
+    <script>
+        function init() {
+            let oldButton = document.getElementById('old-file-upload');
+            let newButton = document.getElementById('new-file-upload');
+            newButton.addEventListener('click', () => {
+                oldButton.click();
+            });
+        }
+    </script>
 </head>
-<body>
+<body onload="init()">
     <h1>h1</h1>
     <h3>h3</h3>
     <p>p</p>
     <div>heres a website</div>
     <div>ct a bozo lol</div>
+    <div class="mt-4">
+        original file upload
+        <input type="file">
+    </div>
+    <div class="mt-4">
+        custom file upload
+        <input style="display: none;" id="old-file-upload" type="file">
+        <div id="new-file-upload" style="border-style:solid;border-radius: 10px;display:flex;align-items: center;justify-content: center; padding: 4px; max-width: 200px;">
+            New Fun button
+        </div>
+    </div>
     <!-- <div>
         FITDEGREE
         <script>(()=> {const script = document.createElement("script"); const time = Date.now(); script.src = 'https://test.lenzvu.com/js/chat.js?company_id=639&v=' + time;document.head.append(script);})();</script>
