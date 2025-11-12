@@ -23,10 +23,441 @@
     <h3>h3</h3>
     <p>p</p>
     <div>heres a website</div>
+
+
+
+    <div>
+
+
+
+        <button type="button" class="lvu_modal_trigger" data-lvu-modal-target="#lvu-form-modal-1" aria-label="Open form">
+    Fill out the form
+</button>
+<div class="lvu_modal_overlay" id="lvu-form-modal-1" role="dialog" aria-modal="true" aria-labelledby="lvu-form-modal-1_title" style="display: none;">
+  <div class="lvu_modal_backdrop" data-lvu-modal-close></div>
+  <div class="lvu_modal_container">
+    <div class="lvu_modal_content">
+      <div class="lvu_modal_header">
+        <h2 class="lvu_modal_title" id="lvu-form-modal-1_title">test embed 1</h2>
+        <button type="button" class="lvu_modal_close" data-lvu-modal-close aria-label="Close modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="lvu_modal_body">
+        <div id="lvu-embed-shell">
+<style>
+/* CSS Reset - Ensure form elements inherit values instead of using browser defaults */
+#lvu-embed-shell input,
+#lvu-embed-shell textarea,
+#lvu-embed-shell select,
+#lvu-embed-shell button,
+#lvu-embed-shell label {
+    margin: inherit;
+    padding: inherit;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background: inherit;
+    color: inherit;
+    vertical-align: inherit;
+}
+
+#lvu-embed-shell input:focus,
+#lvu-embed-shell textarea:focus,
+#lvu-embed-shell select:focus,
+#lvu-embed-shell button:focus {
+    outline: none;
+}
+
+#lvu-embed-shell {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+/* When inside a modal, ensure proper centering and spacing */
+.modal-body #lvu-embed-shell {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#lvu-embed-shell .lvu_formfield {
+    clear: left;
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    display: grid;
+    margin-bottom: 1rem;
+}
+#lvu-embed-shell .lvu_formfield .lvu_input,
+#lvu-embed-shell .lvu_formfield .lvu_select {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #fff;
+}
+#lvu-embed-shell .lvu_formfield .lvu_input:focus,
+#lvu-embed-shell .lvu_formfield .lvu_select:focus,
+#lvu-embed-shell .lvu_formfield .lvu_textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+#lvu-embed-shell .lvu_button {
+    clear: both;
+    background-color: #111;
+    border: 0 none;
+    border-radius: 4px;
+    transition: all 0.23s ease-in-out 0s;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    margin: 1.5rem auto 0;
+    padding: 0 22px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    width: fit-content;
+    min-width: 120px;
+}
+#lvu-embed-shell .lvu_formfield .lvu_label {
+    display: block;
+    margin-bottom: 8px;
+    padding-bottom: 0;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: inherit;
+}
+#lvu-embed-shell .lvu_formfield .lvu_textarea {
+   font-family: inherit;
+   font-size: 16px;
+   height: 100px;
+   width: 100%;
+   padding: 10px 12px;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   resize: vertical;
+}
+.lvu_hidden {
+    display: none;
+}
+#lvu-form-success {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+#lvu-form-error {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+/* Checkbox and Radio field styles */
+#lvu-embed-shell .lvu_checkbox_radio_option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 3px 0;
+    padding-left: 4px;
+}
+#lvu-embed-shell .lvu_checkbox_radio_option input[type="checkbox"],
+#lvu-embed-shell .lvu_checkbox_radio_option input[type="radio"] {
+    margin-right: 4px;
+    align-self: center;
+}
+#lvu-embed-shell .lvu_checkbox_radio_option label {
+    margin-right: 4px;
+}
+#lvu-embed-shell .lvu_checkbox_radio_input {
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #fff;
+    margin-top: 8px;
+}
+#lvu-embed-shell .lvu_checkbox_radio_input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Floating modal trigger button - fixed to bottom-right */
+.lvu_modal_trigger {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 9998 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 50px !important;
+    padding: 12px 24px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    background-color: #007bff !important;
+    color: #ffffff !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-family: inherit !important;
+}
+.lvu_modal_trigger:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+    background-color: #0056b3 !important;
+}
+.lvu_modal_trigger:focus {
+    outline: 2px solid #007bff !important;
+    outline-offset: 2px !important;
+}
+
+/* Add your own custom css here, and feel free to modify any defaults set above */
+</style>
+<form id="lvu_embedded_form" method="POST">
+<!-- Do not remove the 3 fields below, form submission will not work without them -->
+<input type="hidden" name="form_id" value="1"/>
+<input type="hidden" name="waiver_view_time" value="0"/>
+<input type="hidden" name="lvu_embedded_form" value="1"/>
+<div class="lvu_formfield"><label class="lvu_label">First Name</label><input class="lvu_input" type="text" name="first_name" required placeholder="First Name"></div><div class="lvu_formfield"><label class="lvu_label">Last Name</label><input class="lvu_input" type="text" name="last_name" required placeholder="Last Name"></div><div class="lvu_formfield"><label class="lvu_label">Email</label><input class="lvu_input" type="email" name="email" required placeholder="Email"></div><div class="lvu_formfield"><label class="lvu_label">Emergency Contact Phone</label><input class="lvu_input" type="tel" name="emergency_contact_phone" pattern="[0-9]{10}" oninvalid="setCustomValidity('Please enter a valid phone number using only digits (0-9). No spaces, dashes, or other characters are allowed.')" oninput="setCustomValidity('')" required></div><div class="lvu_formfield"><label class="lvu_label">test profile radio</label><div class="lvu_checkbox_radio_option"><input required id="62_0" type="radio" name="test_profile_radio" value="Yes"><label for="62_0">Yes</label></div><div class="lvu_checkbox_radio_option"><input required id="62_1" type="radio" name="test_profile_radio" value="No"><label for="62_1">No</label></div><div class="lvu_checkbox_radio_option"><input required id="62_2" type="radio" name="test_profile_radio" value="Maybe"><label for="62_2">Maybe</label><input type="text" name="test_profile_radio" class="lvu_checkbox_radio_input" placeholder="Enter additional information"></div></div><div class="lvu_formfield"><label class="lvu_label">test</label><div class="lvu_checkbox_radio_option"><input  id="63_0" type="checkbox" name="test_lvuchk0" value="Yes"><label for="63_0">Yes</label></div><div class="lvu_checkbox_radio_option"><input  id="63_1" type="checkbox" name="test_lvuchk1" value="no"><label for="63_1">no</label></div></div><div class="lvu_formfield"><label class="lvu_label">Test Profile Field with a really long name because I want to test to see what it looks like in the profile page, giving myself a nice css challenge, hope this was long enough?</label><input class="lvu_input" type="text" name="test_profile_field_with_a_really_long_name_because_i_want_to_test_to_see_what_it_looks_like_in_the_profile_page_giving_myself_a_nice_css_challenge_hope_this_was_long_enough" required></div><div class="lvu_formfield"><label class="lvu_label">my profile date field</label><input class="lvu_input" type="date" name="my_profile_date_field" required></div><div class="lvu_formfield"><button type="submit" class="lvu_button">Submit</button></div></form><div style="text-align:center;"><div id="lvu-form-error" class="lvu_hidden" style="color:red;font-style:italic;font-size:0.8rem;"></div></div><div style="text-align:center;"><div id="lvu-form-success" class="lvu_hidden" style="color:green;font-style:italic;font-size:0.8rem;">Thanks! Your form has been successfully submitted.</div></div><input type="hidden" id="lvu-recaptcha" name="recaptcha"><script src="https://www.google.com/recaptcha/api.js?render=6LfattwfAAAAANab9qVoMr1Ho3vGdIwXWKgZKvUL"></script><script>window.lvu_recaptcha_key = "6LfattwfAAAAANab9qVoMr1Ho3vGdIwXWKgZKvUL"</script><script src="http://localhost:8000/js/embed.js"></script></div>
+      </div>
+    </div>
+  </div>
+</div><style>
+/* Custom Modal Styles - Scoped to avoid conflicts with host page */
+.lvu_modal_overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+.lvu_modal_overlay.lvu_modal_active {
+    opacity: 1;
+    visibility: visible;
+}
+.lvu_modal_backdrop {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+.lvu_modal_container {
+    position: relative !important;
+    z-index: 10000 !important;
+    width: 90% !important;
+    max-width: 800px !important;
+    max-height: 90vh !important;
+    margin: 20px !important;
+    box-sizing: border-box !important;
+}
+.lvu_modal_content {
+    background-color: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 90vh !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+.lvu_modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+.lvu_modal_title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: inherit;
+    color: inherit;
+}
+.lvu_modal_close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-family: inherit;
+}
+.lvu_modal_close:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+.lvu_modal_close:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+.lvu_modal_body {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+}
+@media (max-width: 768px) {
+    .lvu_modal_container {
+        width: 95%;
+        margin: 10px;
+        max-height: 95vh;
+    }
+    .lvu_modal_header {
+        padding: 16px 20px;
+    }
+    .lvu_modal_title {
+        font-size: 18px;
+    }
+    .lvu_modal_body {
+        padding: 20px;
+    }
+}
+</style><script>
+(function() {
+    'use strict';
+
+    // Wait for DOM to be ready
+    function initModal() {
+        const modalOverlay = document.getElementById('lvu-form-modal-1');
+        if (!modalOverlay) return;
+
+        const triggerButton = document.querySelector('[data-lvu-modal-target="#lvu-form-modal-1"]');
+        const closeButtons = modalOverlay.querySelectorAll('[data-lvu-modal-close]');
+        const backdrop = modalOverlay.querySelector('.lvu_modal_backdrop');
+
+        // Function to open modal
+        function openModal() {
+            modalOverlay.style.display = 'flex';
+            // Force reflow to ensure display is set before adding class
+            modalOverlay.offsetHeight;
+            modalOverlay.classList.add('lvu_modal_active');
+            document.body.style.overflow = 'hidden';
+
+            // Focus management for accessibility
+            const firstFocusable = modalOverlay.querySelector('input, button, textarea, select, [tabindex]:not([tabindex="-1"])');
+            if (firstFocusable) {
+                setTimeout(() => firstFocusable.focus(), 100);
+            }
+        }
+
+        // Function to close modal
+        function closeModal() {
+            modalOverlay.classList.remove('lvu_modal_active');
+            setTimeout(() => {
+                if (!modalOverlay.classList.contains('lvu_modal_active')) {
+                    modalOverlay.style.display = 'none';
+                }
+            }, 300); // Match transition duration
+            document.body.style.overflow = '';
+        }
+
+        // Open modal on trigger button click
+        if (triggerButton) {
+            triggerButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                openModal();
+            });
+        }
+
+        // Close modal on close button clicks
+        closeButtons.forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeModal();
+            });
+        });
+
+        // Close modal on backdrop click
+        if (backdrop) {
+            backdrop.addEventListener('click', function(e) {
+                if (e.target === backdrop) {
+                    closeModal();
+                }
+            });
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('lvu_modal_active')) {
+                closeModal();
+            }
+        });
+
+        // Prevent modal body scroll from propagating to overlay
+        const modalBody = modalOverlay.querySelector('.lvu_modal_body');
+        if (modalBody) {
+            modalBody.addEventListener('wheel', function(e) {
+                const isAtTop = modalBody.scrollTop === 0;
+                const isAtBottom = modalBody.scrollTop + modalBody.clientHeight >= modalBody.scrollHeight - 1;
+
+                if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+                    e.stopPropagation();
+                }
+            });
+        }
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initModal);
+    } else {
+        initModal();
+    }
+})();
+</script>
+
+
+
+    </div>
+
+
+<!--
     <div>
         FITDEGREE
         <script>(()=> {const script = document.createElement("script"); const time = Date.now(); script.src = 'https://test.lenzvu.com/js/chat.js?company_id=639&v=' + time;document.head.append(script);})();</script>
-    </div>
+    </div> -->
     <!-- <div>
         MINDBODY
         <script>(()=> {const script = document.createElement("script"); const time = Date.now(); script.src = 'https://test.lenzvu.com/js/chat.js?company_id=227&v=' + time;document.head.append(script);})();</script>
