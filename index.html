@@ -513,6 +513,10 @@
     const showAfterPageLoads = 5;
     const showOnce = true;
 
+    // set the floating button to not show before showOnce checkKey
+    const floatingButton = document.querySelector('.lvu_floating_button[data-lvu-modal-target="#' + modalId + '"]');
+    floatingButton.style.display = 'none';
+
     // Check if already shown (if show_once is enabled)
     if (showOnce && localStorage.getItem(shownKey) === 'true') {
         return; // Don't show again
@@ -555,9 +559,6 @@
         } else {
             showFloatingButton();
         }
-    } else {
-        const floatingButton = document.querySelector('.lvu_floating_button[data-lvu-modal-target="#' + modalId + '"]');
-        floatingButton.style.display = 'none';
     }
 })();
 </script>
