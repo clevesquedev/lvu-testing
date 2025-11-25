@@ -29,15 +29,13 @@
     <div>
 
 
-        <button type="button" class="lvu_floating_button" data-lvu-modal-target="#lvu-form-modal-974" aria-label="Open form">
-    Book Now
-</button>
-<div class="lvu_modal_overlay" id="lvu-form-modal-974" role="dialog" aria-modal="true" aria-labelledby="lvu-form-modal-974_title" style="display: none;">
+
+<div class="lvu_modal_overlay" id="lvu-form-modal-978" role="dialog" aria-modal="true" aria-labelledby="lvu-form-modal-978_title" style="display: none;">
   <div class="lvu_modal_backdrop" data-lvu-modal-close></div>
   <div class="lvu_modal_container">
     <div class="lvu_modal_content">
       <div class="lvu_modal_header">
-        <h2 class="lvu_modal_title" id="lvu-form-modal-974_title">Subscribe</h2>
+        <h2 class="lvu_modal_title" id="lvu-form-modal-978_title">Subscribe</h2>
         <button type="button" class="lvu_modal_close" data-lvu-modal-close aria-label="Close modal">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -254,11 +252,10 @@
 #lvu-embed-shell .lvu_button { background-color: #3B82F6; color: #FFFFFF; padding: 12px 24px; height: auto; border-radius: 8px; }
 #lvu-embed-shell .lvu_button:hover { background-color: #2563EB; }
 </style>
-<div class="lvu_header_text" style="font-size: 14px; font-weight: 500; color: #000000; margin-bottom: 12px; text-align: center">Welcome</div>
-<div class="lvu_header_image" style="text-align: center; margin-bottom: 12px"><img src="https://cdn-front.freepik.com/favicons/favicon-96x96.png?w=96&amp;amp;v=2" alt="Form Header" style="width: 100px; max-width: 100%; height: auto" /></div>
+<div class="lvu_header_text" style="font-size: 14px; font-weight: 500; color: #000000; margin-bottom: 12px; text-align: center">Timed Pop up</div>
 <form id="lvu_embedded_form" method="POST">
 <!-- Do not remove the 3 fields below, form submission will not work without them -->
-<input type="hidden" name="form_id" value="974"/>
+<input type="hidden" name="form_id" value="978"/>
 <input type="hidden" name="waiver_view_time" value="0"/>
 <input type="hidden" name="lvu_embedded_form" value="1"/>
 <div class="lvu_formfield"><label class="lvu_label">First Name</label><input class="lvu_input" type="text" name="first_name" required placeholder="First Name"></div><div class="lvu_formfield"><label class="lvu_label">Last Name</label><input class="lvu_input" type="text" name="last_name" required placeholder="Last Name"></div><div class="lvu_formfield"><label class="lvu_label">Email</label><input class="lvu_input" type="email" name="email" required placeholder="Email"></div><div class="lvu_formfield"><button type="submit" class="lvu_button">Submit</button></div></form><div style="text-align:center;"><div id="lvu-form-error" class="lvu_hidden" style="color:red;font-style:italic;font-size:0.8rem;"></div></div><div style="text-align:center;"><div id="lvu-form-success" class="lvu_hidden" style="color:green;font-style:italic;font-size:0.8rem;">Thanks! Your form has been successfully submitted.</div></div><input type="hidden" id="lvu-recaptcha" name="recaptcha"><script src="https://www.google.com/recaptcha/api.js?render=6Lekur0qAAAAAMic7blZhQFZdn0IQ4YpIB0OQ2Ul"></script><script>window.lvu_recaptcha_key = "6Lekur0qAAAAAMic7blZhQFZdn0IQ4YpIB0OQ2Ul"</script><script src="https://test.lenzvu.com/js/embed.js"></script></div>
@@ -388,10 +385,10 @@
 
     // Wait for DOM to be ready
     function initModal() {
-        const modalOverlay = document.getElementById('lvu-form-modal-974');
+        const modalOverlay = document.getElementById('lvu-form-modal-978');
         if (!modalOverlay) return;
 
-        const triggerButton = document.querySelector('[data-lvu-modal-target="#lvu-form-modal-974"]');
+        const triggerButton = document.querySelector('[data-lvu-modal-target="#lvu-form-modal-978"]');
         const closeButtons = modalOverlay.querySelectorAll('[data-lvu-modal-close]');
         const backdrop = modalOverlay.querySelector('.lvu_modal_backdrop');
 
@@ -476,41 +473,14 @@
         initModal();
     }
 })();
-</script><style>
-.lvu_floating_button {
-    position: fixed !important;
-    bottom: 20px !important;
-    left: 20px !important;
-    z-index: 9998 !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    border-radius: 0px !important;
-    padding: 12px 24px !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    transition: all 0.3s ease !important;
-    background-color: #3B82F6 !important;
-    color: #FFFFFF !important;
-    border: none !important;
-    cursor: pointer !important;
-    font-family: inherit !important;
-}
-.lvu_floating_button:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
-    background-color: #9333EA !important;
-}
-.lvu_floating_button:focus {
-    outline: 2px solid #3B82F6 !important;
-    outline-offset: 2px !important;
-}
-</style><script>
+</script><script>
 (function() {
     'use strict';
 
-    const modalId = 'lvu-form-modal-974';
-    const pageLoadsKey = 'lvu_form_974_floating_page_loads';
-    const shownKey = 'lvu_form_974_floating_shown';
-    const showAfterPageLoads = 5;
+    const modalId = 'lvu-form-modal-978';
+    const pageLoadsKey = 'lvu_form_978_page_loads';
+    const shownKey = 'lvu_form_978_shown';
+    const showAfterPageLoads = 4;
     const showOnce = true;
 
     // Check if already shown (if show_once is enabled)
@@ -532,24 +502,33 @@
             localStorage.setItem(shownKey, 'true');
         }
 
-        // Wait for DOM to be ready, then show floating button
-        function showFloatingButton() {
-            const floatingButton = document.querySelector('.lvu_floating_button[data-lvu-modal-target="#' + modalId + '"]');
-            if (!floatingButton) {
-                // Retry after a short delay if button isn't ready yet
-                setTimeout(showFloatingButton, 100);
+        // Wait for DOM to be ready, then open modal
+        function openTimedModal() {
+            const modalOverlay = document.getElementById(modalId);
+            if (!modalOverlay) {
+                // Retry after a short delay if modal isn't ready yet
+                setTimeout(openTimedModal, 100);
                 return;
             }
 
-            // Show the floating button
-            floatingButton.style.display = 'block';
+            // Open the modal
+            modalOverlay.style.display = 'flex';
+            modalOverlay.offsetHeight; // Force reflow
+            modalOverlay.classList.add('lvu_modal_active');
+            document.body.style.overflow = 'hidden';
+
+            // Focus management for accessibility
+            const firstFocusable = modalOverlay.querySelector('input, button, textarea, select, [tabindex]:not([tabindex="-1"])');
+            if (firstFocusable) {
+                setTimeout(() => firstFocusable.focus(), 100);
+            }
         }
 
         // Initialize when DOM is ready
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', showFloatingButton);
+            document.addEventListener('DOMContentLoaded', openTimedModal);
         } else {
-            showFloatingButton();
+            openTimedModal();
         }
     }
 })();
