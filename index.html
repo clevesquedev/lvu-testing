@@ -29,7 +29,7 @@
     <div>
 
 
-<button type="button" class="lvu_floating_button" data-lvu-modal-target="#lvu-form-modal-974" aria-label="Open form">
+        <button type="button" class="lvu_floating_button" data-lvu-modal-target="#lvu-form-modal-974" aria-label="Open form">
     Book Now
 </button>
 <div class="lvu_modal_overlay" id="lvu-form-modal-974" role="dialog" aria-modal="true" aria-labelledby="lvu-form-modal-974_title" style="display: none;">
@@ -525,13 +525,9 @@
     // Get current page load count
     let pageLoadCount = parseInt(localStorage.getItem(pageLoadsKey) || '0', 10);
 
-    console.log('pageLoadCount', pageLoadCount);
-
     // Increment page load count
     pageLoadCount++;
     localStorage.setItem(pageLoadsKey, pageLoadCount.toString());
-
-    console.log('pageLoadCount afterLoad', pageLoadCount);
 
     // Check if we've reached the threshold
     if (pageLoadCount >= showAfterPageLoads) {
@@ -562,8 +558,10 @@
     }
 })();
 </script>
-    </div>
 
+
+
+    </div>
 
 <!--
     <div>
